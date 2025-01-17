@@ -1,0 +1,10 @@
+{
+    "avg_scores": {
+        "Security": 1.0,
+        "Compliance": 1.0,
+        "Performance": 1.0,
+        "Scalability": 1.0
+    },
+    "overall_risk": 1.0,
+    "prediction": null
+}

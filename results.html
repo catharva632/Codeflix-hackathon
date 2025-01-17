@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .results {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .score {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assessment Results</h1>
+    <div class="results">
+        <h2>Average Scores by Category</h2>
+        {% for category, score in results.avg_scores.items() %}
+        <p>{{ category }}: <span class="score">{{ score }}</span></p>
+        {% endfor %}
+        <h2>Overall Risk</h2>
+        <p class="score">{{ results.overall_risk }}</p>
+        {% if results.prediction %}
+        <h2>Predicted Risk Level</h2>
+        <p class="score">{{ results.prediction }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
